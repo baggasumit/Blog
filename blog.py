@@ -69,7 +69,7 @@ class MainPage(BlogHandler):
       self.write('The cake is a lie!')
 
 
-##### user stuff
+# user related code
 def make_salt(length = 5):
     return ''.join(random.choice(letters) for x in xrange(length))
 
@@ -115,8 +115,7 @@ class User(db.Model):
             return u
 
 
-##### blog stuff
-
+# blog related code
 def blog_key(name = 'default'):
     return db.Key.from_path('blogs', name)
 
